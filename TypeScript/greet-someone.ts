@@ -1,6 +1,6 @@
 function personal_greeting(name?: string): string {
-    if (name) {return "Hello, " + name + "!";}
-    else {return "Hi to everyone!";}
+    if (name) return "Hello, " + name + "!";
+    else return "Hi to everyone!";
 }
 
 const my_name = "John";
