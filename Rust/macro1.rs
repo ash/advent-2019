@@ -7,4 +7,5 @@ fn main() {
     my_macro!(n);
     my_macro!((n));
     my_macro!(n + 1);
+    println!("{}", n);
 }
