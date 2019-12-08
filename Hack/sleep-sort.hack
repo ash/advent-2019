@@ -1,15 +1,17 @@
 async function sort_me($n) {
-    \HH\Asio\usleep($n * 1000000);
-    echo $n;
+    await SleepWaitHandle::create($n * 100000);
+    echo "$n\n";
 }
 
-<<__EntryPoint>>
 async function main() {
-    $data = vec[10, 4, 2, 6, 2, 7, 1, 3];
-    $p = [];
+    $data = [10, 4, 2, 6, 2, 7, 1, 3];
+    $sorts = Vector {};
+    foreach ($data as $n) {
+        $sorts[] = sort_me($n);
+    }
 
-    $s1 = await sort_me(4);
-    $s2 = await sort_me(2);
-    
-    
+    await GenArrayWaitHandle::create($sorts);
 }
+
+main()->join();
+
