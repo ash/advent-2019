@@ -5,12 +5,13 @@ async function sort_me($n) {
 
 async function main() {
     $data = [10, 4, 2, 6, 2, 7, 1, 3];
-    $sorts = Vector {};
+    $jobs = Vector {};
     foreach ($data as $n) {
-        $sorts[] = sort_me($n);
+        $jobs[] = sort_me($n);
+        // $jobs->add(sort_me($n));
     }
 
-    await GenArrayWaitHandle::create($sorts);
+    await GenArrayWaitHandle::create($jobs);
 }
 
 main()->join();
