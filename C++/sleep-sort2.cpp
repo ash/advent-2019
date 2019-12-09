@@ -15,9 +15,9 @@ void sort_me(int n) {
 }
 
 int main() {
-    vector<thread*> tasks;
+    vector<thread> tasks;
 
-    for (auto n : data) tasks.push_back(new thread {sort_me, n});
-    for (auto t : tasks) t->join();
+    for (auto n : data) tasks.push_back(thread {sort_me, n});
+    for (auto&& t : tasks) t.join();
     for (auto n : result) cout << n << "\n";
 }

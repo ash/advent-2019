@@ -17,7 +17,7 @@ void sort_me(int n) {
 int main() {
     vector<int> data {10, 4, 2, 6, 2, 7, 1, 3};
 
-    vector<thread*> tasks;
-    for (auto n : data) tasks.push_back(new thread {sort_me, n});
-    for (auto t : tasks) t->join();
+    vector<thread> tasks;
+    for (auto n : data) tasks.push_back(thread {sort_me, n});
+    for (auto&& t : tasks) t.join();
 }
