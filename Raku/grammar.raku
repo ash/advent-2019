@@ -1,12 +1,12 @@
 grammar URL {
     token TOP {
-        <protocol> '://' <host> <location>?
+        <protocol> '://' <host> <path>?
     }
 
     token protocol { 'http' | 'https' }
     token host     { [\w+]+ %% '.' }
-    token location { '/' [\w+]* %% '/' }
+    token path     { '/' [\w+]* %% '/' }
 }
 
 say URL.parse("https://www.google.com");
-say ~URL.parse("https://www.google.com/search/images")<location>;
+say ~URL.parse("https://www.google.com/search/images")<path>;

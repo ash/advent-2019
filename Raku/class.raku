@@ -8,4 +8,4 @@ class Person {
 }
 
 my $p = Person.new(name => "John", age => 22);
-say $p.info;
+say $p.info; # John is 22 years old.
