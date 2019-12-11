@@ -1,4 +1,4 @@
-sub postfix:<!>(Int $n where * > 0) {
+sub postfix:<!>(Int $n where $n > 0) {
     [*] 1..$n
 }
 
