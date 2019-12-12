@@ -1,6 +1,6 @@
 sub f(Str $s) returns Str {
-    "((($s.uc)))"
+    $s.uc
 }
 
-say f('Word'); # (((Word)))
+say f('Word'); # WORD
 # say f(42); # Compile-time error
