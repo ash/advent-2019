@@ -4,7 +4,7 @@ let new_person name age = object
 
   method info =
     Printf.sprintf "%s is %i." name age
-end;;
+end
 
 let john = new_person "John" 32;;
 let alla = new_person "Alla" 31;;
