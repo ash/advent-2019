@@ -12,5 +12,5 @@ proc info(x: ref Animal): string =
 
 var zoo: zoo_t = [Cat(), Dog(), Cat(), Dog()]
 
-for i in 0..(len(zoo) - 1):
-  echo info(zoo[i])
+for _, x in zoo:
+  echo info(x)
