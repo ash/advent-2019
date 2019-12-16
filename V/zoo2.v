@@ -21,8 +21,8 @@ zoo1 := [Cat{}, Cat{}]
 zoo2 := [Dog{}, Dog{}]
 
 for a in zoo1 {
-    println(zoo_info(a))
+    println(zoo_info(a)) // a is a Cat
 }
 for a in zoo2 {
-    println(zoo_info(a))
+    println(zoo_info(a)) // a is a Dog
 }
