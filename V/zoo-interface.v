@@ -1,4 +1,4 @@
-interface Infoer {
+interface Informer {
     info() string
 }
 
