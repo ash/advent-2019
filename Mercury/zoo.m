@@ -33,6 +33,6 @@ main(!IO) :-
 :- mode print_animal(in, di, uo) is det.
 
 print_animal(Animal, !IO) :-
-    info(Animal, Area),
-    io.write_string(Area, !IO),
+    info(Animal, Message),
+    io.write_string(Message, !IO),
     io.nl(!IO).
