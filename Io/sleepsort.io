@@ -7,7 +7,7 @@ Sorter sort := method(n,
 )
 
 sort_me := method(n,
-    s := Sorter clone    
+    s := Sorter clone;
     s @@sort(n)
 )
 
